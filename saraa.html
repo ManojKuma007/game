@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>MYApp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="MYApp" ng-controller="GameController">
+<div>
+
+    <div class="incorrect"><label id="inco">Incorrect guesses::</label><span ng-repeat="letter in incorrectLettersChosen">{{letter}}</span>
+    </div>
+    <div class="correct"><label id="co">Correct guesses::</label><span ng-repeat="letter in correctLettersChosen">{{letter}}</span></div>
+
+    <div class="box2">
+       <div id="turns"> <label>Turns::</label>{{guess}}</div>
+        <div id="displayword"><label >You have to guess:</label> {{displayWord}}</div>
+        <div>
+            <input type="text" name="guess" ng-model="input.letter" placeholder="Enter a letter "></div>
+        <div><button ng-click="letterChosen()"><span>sure</span></button></div>
+        </div>
+</div>
+</body>
+</html>
